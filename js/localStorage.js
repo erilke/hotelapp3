@@ -1,16 +1,15 @@
-//Archivos de bases de datos no relacionales...
+//Archovo de Bases de Datos no relacionales
 var ls = {
 	registroLocal: function(){
-		//agregar llave
-		window.localStorage,setItem("nom",device.uuid);
-		window.location.href = "#home";
+		//Agregar llave
+		window.localStorage.setItem("nom",device.uuid);
+		window.location.href = '#home';
 	},
-	estaRegistrado: function() {
+	estaRegistrado: function(){
 		var nom = window.localStorage.getItem("nom");
-		if (nom != undefined)
+		if(nom != undefined)
 			return true;
 		else
 			return false;
 	}
-
-};
+}
