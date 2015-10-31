@@ -1,10 +1,11 @@
 var fileTransfer = {
-	win: function (r) {
-		if(r.response == '1'){
-			navigator.notification.alert("Los datos se han enviado satisfactoriamente", null, "Registro Correcto", "Aceptar");
-		}else{
-			alert("Error");
-		}
+    win: function (r) {
+        if (r.response == "1"){
+            navigator.notification.alert("Los datos se han enviado satisfactoriamente",ls.registroLocal,"Registro correcto","Aceptar");
+        }else{
+            alert("Error");
+        }
+    },
 			
 	},
 	fail: function (error) {
