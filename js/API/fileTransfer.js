@@ -1,25 +1,22 @@
-//fileTransfer.js
-var myTransfer = {
-    subido: function(r){
-        if(r.response == '1'){
-            $.mobile.loading( 'hide' );
-            navigator.notification.alert("Se ha registrado correctamente",function(){
-                window.location.href = '#home';
-                fn.storage.setItem('registro',1);//Guarda localmente un dato
-            },"Felicidades","Aceptar");
-        }
-    },
-    error: function(err){
-        navigator.notification.alert("Error: "+err.code,null,"Error","Aceptar");
-    },
-    subir: function(uri,url){
-        myTransfer.opciones = new FileUploadOptions();
-        myTransfer.opciones.fileKey = "foto";
-        myTransfer.opciones.fileName = "Carlos";
-        myTransfer.opciones.mimeType = "image/jpeg";
-        myTransfer.opciones.params = {value1: 'Text',value2: 'param'};
-        
-        myTransfer.ft = new FileTransfer();
-        myTransfer.ft.upload(uri,url,myTransfer.subido,myTransfer.error,myTransfer.opciones);
-    }
+var fileTransfer = {
+	win: function (r) {
+		if(r.response == '1'){
+			navigator.notification.alert("Los datos se han enviado satisfactoriamente", null, "Registro Correcto", "Aceptar");
+		}else{
+			alert("Error");
+		}
+			
+	},
+	fail: function (error) {
+		alert("An error has occurred: Code = " + error.code);
+	},
+	sendPhoto: function(path){
+		var options = new FileUploadOptions();
+		options.fileKey = "foto";
+		options.fileName = "Carlos";
+		options.mimeType = "image/jpeg";
+
+		var ft = new FileTransfer();
+		ft.upload(path, "http://carlos.igitsoft.com/apps/test.php", fileTransfer.win, fileTransfer.fail, options);
+	}
 };
