@@ -14,9 +14,9 @@ var fn = {
     }
 
     estarRegistrado: function(){
-        window.localStorage.getItem('uuid') !=undefined){
-            return true;
-        }
+  //      window.localStorage.getItem('uuid') !=undefined){
+  //          return true;
+  //      }
         return false;
     }
 
@@ -27,7 +27,7 @@ var fn = {
         var nom = $('#regNom').val();
         var tel = $('#regTel').val();
         var mail = $('#regMail').val();
-        var foto = $('#fotoTomada').attr("rel");
+        var foto = $('#fotoTomada').attr('rel');
 
         if (nom!= '' && tel!= '' && mail!= '' && foto!= undefined && foto != ''){
         //if (nom!= '' && tel!= '' && mail!= ''){
