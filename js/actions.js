@@ -5,7 +5,7 @@ var fn = {
         if (!fn.estarRegistrado())
             window.location.href = '#registro';
         $('#regSend').click(fn.getReg);
-        $('tomarFoto').click(mc.start());
+        $('#tomarFoto').click(mc.start());
 
     },
 
