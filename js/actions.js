@@ -40,7 +40,7 @@ var fn = {
 		/* $(this).index()==1 se utiliza para saber que se pulsa el boton siguiente que en el index es el 1.*/
 		if( $(this).index()==1 && $("#nr1").attr("th") != undefined){
 			/* Opcion seleccionada, pasar a la siguiente pantalla*/
-			window.location.href="#nr2"
+			window.location.href="#nr2";
 		}else{
 			if ( $(this).index()!==0) {
 				alert("Es necesario seleccionar un tipo de habitación");
