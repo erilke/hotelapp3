@@ -1,6 +1,5 @@
 /* Este script esta basado en webSQL*/
-
-var almacen ={
+var almacen = {
 	db:null,
 	th:null,
 	np:null,
@@ -13,9 +12,7 @@ var almacen ={
 		almacen.np = np;
 		almacen.nh = nh;
 		almacen.nd = nd;		
-
 		almacen.db.transaction(almacen.tablaReserva, almacen.error, almacen.exito);
-
 	},
 	error: function(e){
 		alert("Error: código: "+ e.code);
@@ -25,8 +22,8 @@ var almacen ={
 	},
 	tablaReserva: function(tx){
 		tx.executeSql("CREATE TABLE IF NOT EXISTS reservas(th, np, nh, nd)");
-		tx.executeSql("INSERT INTO reservas(th, np, nh, nd)
-						VALUES ("+almacen.th+","+almacen.np+","+almacen.nh+","+almacen.nd+")");
-	}
+		tx.executeSql("INSERT INTO reservas(th, np, nh, nd)	
+			VALUES ("+almacen.th+","+almacen.np+","+almacen.nh+","+almacen.nd+")");
 
+	}
 }
