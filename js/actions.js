@@ -6,7 +6,7 @@ var fn = {
 	
 		//Funcionalidades de Registro
 		$('#regSend').click(fn.getRegister);
-		//$('#takePhoto').click(mediaCapture.takePhoto);
+		$('#takePhoto').click(mediaCapture.takePhoto);
 		$('#nr1 ul[data-role=listview] a').click(fn.seleccionarTipo);
 		$('#nr1 div[data-role= navbar] li').click(fn.nr1Siguiente);
 		$('#nr2 div[data-role= navbar] li').click(fn.nr2Reservar);
@@ -48,7 +48,7 @@ var fn = {
 
 		}
 	},
-	
+
 	nr2Reservar: function(){
 		var th = $("#nr1").attr("th");
 		var np = $("#numPersonas").val();

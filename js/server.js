@@ -16,13 +16,13 @@ var server = {
 	},
 
 	envRes: function(th, np, nh ,nd){
-		$mobile.loading("show");
+		$.mobile.loading("show");
 		$.ajax({
 			method: "POST",
 			url: "http://carlos.igitsoft.com/apps/test.php",
 			data: { tipo: th, nump: np, numh: nh, dias: nd }
 		}).done(function(respuesta){
-			$mobile.loading("hide");
+		$.mobile.loading("hide");
 			if(respuesta=='1'){
 				// Agregar al historial de reservas
 			}else{
