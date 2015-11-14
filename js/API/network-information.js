@@ -5,6 +5,10 @@ var conexion= {
 		}else{
 			return false;
 		}
+	},
+
+	eventoConectado: function (){
+		document.addEventListener("online", almacen.syncData, false);
 	}
 
 }
