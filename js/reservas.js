@@ -7,6 +7,7 @@ var almacen = {
 	nd:null,
 
 	guardarReserva: function(th, np, nh, nd) {
+		alert(th+np+nh+nd);
 		almacen.db = window.openDatabase("hotelApp","1.0","Hotel App", 200000);
 		almacen.th = th;
 		almacen.np = np;
@@ -22,7 +23,7 @@ var almacen = {
 	},
 	tablaReserva: function(tx){
 		tx.executeSql("CREATE TABLE IF NOT EXISTS reservas(th, np, nh, nd)");
-		tx.executeSql("INSERT INTO reservas (th, np, nh, nd)	
+		tx.executeSql("INSERT INTO reservas (th, np, nh, nd) 
 			VALUES ('"+almacen.th+"','"+almacen.np+"','"+almacen.nh+"','"+almacen.nd+"')");
 
 	}
