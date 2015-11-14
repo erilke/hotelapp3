@@ -50,14 +50,11 @@ var almacen = {
 				almacen.guardarHistorial(response.rows.item(i).th, response.rows.item(i).np, response.rows.item(i).nh, response.rows.item(i).nd);
 			}
 			tx2.executeSql("DELETE FROM reservas");
-
 		}, almacen.error);
+	},
+		
 	reservaLeida: function(){
 		alert("Reservas sincronizadas");
 	}
-
-	}
-
-
 
 }
